@@ -5,6 +5,10 @@
        <title>My Project</title>
         <link rel="stylesheet" href="style/style.css" type="text/css">
         <link rel="shortcut icon" href="img/favicon.ico.png" type="images/x-icon">
+        <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <link rel="stylesheet" href="style/fotorama.css" type="text/css">
+        <script type="text/javascript" src="js/fotorama.js"></script>
     </head>
     <body>
         <div class="menu">
@@ -16,16 +20,48 @@
             </ul>
         </div>
      
-        <div class="slide">
+        <div class="fotorama" id=slide1 data-loop="true">      
             <img src="img/food1.jpg" alt="Еда">
             <img src="img/food9.jpg" alt="Еда">
             <img src="img/food12.jpg" alt="Еда">
         </div>
+                      
+        <div class="about">
+            <h4>ABOUT US</h4>      
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam commodo purus est, ac molestie lacus lacinia non. Vivamus velit orci, volutpat vel nulla a, tristique faucibus massa. Sed magna purus, efficitur ornare hendrerit eu, consectetur ut eros. Sed tristique imperdiet nisi, ac pulvinar metus bibendum at. Ut feugiat, ante eu condimentum malesuada, neque diam tincidunt libero, sed ultricies est eros auctor ligula. Sed facilisis non elit ac bibendum. Phasellus dui est, suscipit vulputate velit non, lacinia vestibulum justo. Nam a enim nunc. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur placerat nec risus a auctor. Curabitur eget justo maximus, porta felis a, euismod eros. Proin volutpat volutpat massa, viverra ornare odio rutrum in. Duis ac consectetur elit, et dictum velit. Etiam blandit massa quis metus pretium, eu molestie nisl eleifend. Duis aliquet sem eget erat congue venenatis vitae a ante.</p>
+        </div>
         
-        <h4 id="about">ABOUT US</h4>      
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam commodo purus est, ac molestie lacus lacinia non. Vivamus velit orci, volutpat vel nulla a, tristique faucibus massa. Sed magna purus, efficitur ornare hendrerit eu, consectetur ut eros. Sed tristique imperdiet nisi, ac pulvinar metus bibendum at. Ut feugiat, ante eu condimentum malesuada, neque diam tincidunt libero, sed ultricies est eros auctor ligula. Sed facilisis non elit ac bibendum. Phasellus dui est, suscipit vulputate velit non, lacinia vestibulum justo. Nam a enim nunc. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur placerat nec risus a auctor. Curabitur eget justo maximus, porta felis a, euismod eros. Proin volutpat volutpat massa, viverra ornare odio rutrum in. Duis ac consectetur elit, et dictum velit. Etiam blandit massa quis metus pretium, eu molestie nisl eleifend. Duis aliquet sem eget erat congue venenatis vitae a ante.</p>
-        <h4 id="gal">GALLERY</h4>
-        <h4 id="inf">INFO</h4>
+        <div id="gal">
+            <h4>GALLERY</h4>
+             <img class=small src="img/food3.jpg" alt="Еда">
+             <img class=small src="img/food4.jpg" alt="Еда">
+             <img class=small src="img/food5.jpg" alt="Еда">
+             <img class=small src="img/food8.jpg" alt="Еда">
+             <img class=small src="img/food10.jpg" alt="Еда">
+             <img class=small src="img/food11.jpg" alt="Еда">
+             <img class=small src="img/food14.jpg" alt="Еда">
+             <img class=small src="img/food15.jpg" alt="Еда">
+             <img class=small src="img/food16.jpg" alt="Еда">
+        </div>
+        
+        <div id="inf">
+            <h4>INFO</h4>
+
+        </div>
+        
+        <div class="fotorama" id=slide2 data-nav="thumbs">      
+            <img src="img/food2.jpg" alt="Еда"  data-caption="Lorem ipsum dolor sit amet">
+            <img src="img/food7.jpg" alt="Еда" data-caption="Consectetur adipiscing elit">
+            <img src="img/food17.jpg" alt="Еда" data-caption="Nam commodo purus est">
+            <img src="img/food20.jpg" alt="Еда"  data-caption="Ac molestie lacus lacinia non">
+            <img src="img/food18.jpg" alt="Еда" data-caption="Vivamus velit orci">
+            <img src="img/food19.jpg" alt="Еда" data-caption="Volutpat vel nulla">
+
+        </div>
+        
+        <div class="about">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam commodo purus est, ac molestie lacus lacinia non. Vivamus velit orci, volutpat vel nulla a, tristique faucibus massa. Sed magna purus, efficitur ornare hendrerit eu, consectetur ut eros. Sed tristique imperdiet nisi, ac pulvinar metus bibendum at. Ut feugiat, ante eu condimentum malesuada, neque diam tincidunt libero, sed ultricies est eros auctor ligula. Sed facilisis non elit ac bibendum. Phasellus dui est, suscipit vulputate velit non, lacinia vestibulum justo. Nam a enim nunc. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur placerat nec risus a auctor. Curabitur eget justo maximus, porta felis a, euismod eros. Proin volutpat volutpat massa, viverra ornare odio rutrum in. Duis ac consectetur elit, et dictum velit. Etiam blandit massa quis metus pretium, eu molestie nisl eleifend. Duis aliquet sem eget erat congue venenatis vitae a ante.</p>
+        </div>
         <hr>
         <p>2017 &copy; Anastasia </p>
     </body>
