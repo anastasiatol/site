@@ -3,73 +3,28 @@
     padding: 0;
 }
 body{
-    background-image: url(../img/back0.jpg)    
+    background-image: url(img/back0.jpg)    
 }
-.menu li{
+li{
     padding: 5px 10px;
     display: inline-block;
     border-style: solid;
     border-radius: 10px;
-    font-size: 1.5em;       /*размер шрифта!!!*/
-    width: 15%;
-    margin-top: 15%;         
+    color: black;
+    font-size: 28px;
+    width: 150px;
+    margin-top: 161px;         /*убрать подчеркивание*/
     text-align: center;
     float: right;
     margin-right: 10px;
-    background: #e8e0a4;
-}
-.menu a{
-    text-decoration: none;
-    color: rgb(201, 62, 62);
 }
 #logo{
     float: left;
-    width: 289px;
-    max-width: 35%;
 }
 .menu{
-    background: white;
     width: 1000px;
-    max-width: 90%;
-    height: 211px;              /*!!! высота*/
+    height: 211px;
     border: 3px solid black;
     margin: auto;
     margin-top: 50px;
-    border-radius: 10px;
-}
-.fotorama{
-    width: 800px;
-    max-width: 90%;
-    margin: auto;
-    margin-top: 30px;
-   }
-h4{
-    font-size: 22px;
-    text-align: center;
-    padding-top: 30px;
-}
-p{
-    font-size: 18px;
-    text-align: justify;
-    width: 1000px;
-    max-width: 90%;
-    margin: auto;
-    background: white;
-    margin-top: 30px;
-    border: solid 1px;
-    padding: 10px;
-    border-radius: 10px;
-    margin-bottom: 10px;
- }
-.gallery{
-    width: 1000px;
-    max-width: 90%;
-    margin: auto;
-    margin-top: 30px
-}
-.small{
-    width: 300px;
-    max-width: 30%;
-    margin: auto;
-    margin: 1.5%;
 }
