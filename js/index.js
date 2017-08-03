@@ -23,8 +23,14 @@
         });
     }
 
+<<<<<<< HEAD
     $(document).ready(function () {
         //first opening application
+=======
+
+
+    $(document).ready(function () {
+>>>>>>> origin/master
         renderGallery();
     });
 })();
