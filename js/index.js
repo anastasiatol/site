@@ -1,19 +1,18 @@
-(function () {
-    function getImagesFromServer() {
-        return [{
-            src: "img/food4.jpg"
-        }, {
-            src: "img/food4.jpg"
-        }, {
-            src: "img/food4.jpg"
-        }, {
-            src: "img/food4.jpg"
-        }];
-    }
+function getImagesFromServer() {
+    return $.get("js/images.json");
+}
 
-    function renderGallery() {
-        var images = getImagesFromServer();
+function renderGallery() {
+    var self = this;
+    var images = getImagesFromServer().then(function (data) {
+        var images = JSON.parse(data);
+        renderImageCollection(images);
+    })
+}
 
+function renderImageCollection(images) {
+    if (images) {
+        self.images = images;
         images.forEach(function (image) {
             var img = document.createElement("img");
             img.src = image.src;
@@ -22,8 +21,15 @@
             $("#gallery").append(img);
         });
     }
+}
 
-    $(document).ready(function () {
-        //first opening application
-    }
-})();
+$(document).ready(function () {
+    //first opening application
+    renderGallery();
+});
+
+function filterByTag(event){
+    //this.images
+    //var filteredimages = this.images.filter
+    //renderImageCollection(filteredimages)
+}

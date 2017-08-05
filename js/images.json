@@ -1,7 +1,23 @@
-
 [
-    {src:"img/food3.jpg",
-     tags:[div:"bel"]
+    {
+        "src": "img/food3.jpg",
+        "tags": ["bel", "dessert"],
+        "title": "gffgf"
+   }, {
+        "src": "img/food3.jpg",
+        "tags": ["bel", "dessert"],
+        "title": "gffgf"
+   }, {
+        "src": "img/food3.jpg",
+        "tags": ["bel", "dessert"],
+        "title": "gffgf"
+   }, {
+        "src": "img/food3.jpg",
+        "tags": ["bel", "dessert"],
+        "title": "gffgf"
+   }, {
+        "src": "img/food3.jpg",
+        "tags": ["bel", "dessert"],
+        "title": "gffgf"
    }
- 
 ]
