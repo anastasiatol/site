@@ -68,7 +68,7 @@ p{
 .tagButton{
     border: 2px solid black;
     border-radius: 5px;
-    display: inline;
+    display: inline-block;
     padding: 5px 10px;  
     font-size: 150%;
     background: rgba(164, 162, 222, 0.56);
