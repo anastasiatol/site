@@ -1,23 +1,47 @@
 [
     {
         "src": "img/food3.jpg",
-        "tags": ["bel", "dessert"],
-        "title": "gffgf"
+        "tags": ["bel", "main"],
+        "title": "Borsch"
    }, {
-        "src": "img/food3.jpg",
+        "src": "img/food4.jpg",
         "tags": ["bel", "dessert"],
-        "title": "gffgf"
+        "title": "Pancake"
    }, {
-        "src": "img/food3.jpg",
-        "tags": ["bel", "dessert"],
-        "title": "gffgf"
+        "src": "img/food5.jpg",
+        "tags": ["bel", "main"],
+        "title": "Potato pancakes"
    }, {
-        "src": "img/food3.jpg",
-        "tags": ["bel", "dessert"],
-        "title": "gffgf"
+        "src": "img/food8.jpg",
+        "tags": ["ital", "main"],
+        "title": "Pasta"
+   },  {
+        "src": "img/food22.jpg",
+        "tags": ["ital", "main"],
+        "title": "Lasagna"
    }, {
-        "src": "img/food3.jpg",
-        "tags": ["bel", "dessert"],
-        "title": "gffgf"
+        "src": "img/food10.jpg",
+        "tags": ["ital", "starter"],
+        "title": "Caprese"
+   }, {
+        "src": "img/food11.jpg",
+        "tags": ["ital", "dessert"],
+        "title": "Cannoli"
+   },  {
+        "src": "img/food14.jpg",
+        "tags": ["jap", "starter"],
+        "title": "Oyakodon"
+   }, {
+        "src": "img/food15.jpg",
+        "tags": ["jap", "main"],
+        "title": "Sushi"
+   }, {
+        "src": "img/food16.jpg",
+        "tags": ["jap", "main"],
+        "title": "Noodle"
+   }, {
+        "src": "img/food21.jpg",
+        "tags": ["jap", "dessert"],
+        "title": "Mochi"
    }
 ]
