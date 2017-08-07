@@ -5,12 +5,13 @@ function getImagesFromServer() {
 function renderGallery() {
     getImagesFromServer().then(function (data) {
         renderImageCollection(data);
-    })
+        this.images = data;
+    }.bind(this))
 }
 
 function renderImageCollection(images) {
     if (images) {
-        this.images = images;
+
         images.forEach(function (image) {
             var img = document.createElement("img");
             img.src = image.src;
@@ -26,14 +27,18 @@ function renderTagButtons() {
         {
             text: 'Bellorussian cuisine',
             tag: "bel"
-        }, 
+        },
         {
             text: 'Italian cuisine',
             tag: 'ital'
-        }, 
+        },
         {
             text: "Japanese cuisine",
             tag: 'jap'
+        },
+        {
+            text: "Show everything",
+            tag: "all"
         }];
     buttonNames.forEach(function (filter) {
         var button = document.createElement('div');
@@ -54,11 +59,14 @@ $(document).ready(function () {
 });
 
 function filterByTag(tagName) {
-    var galleryElement = $(".gallery-images");
-    if (galleryElement) {
-        $(galleryElement).remove();
-    };
-    //this.images
-    //var filteredimages = this.images.filter
-    //renderImageCollection(filteredimages)
+
+    $("div.gallery-images").empty();
+    if (tagName == 'all') {renderImageCollection(this.images)}
+    else {
+        var filteredImages = this.images.filter(function (foodimg) {
+        return foodimg.tags.indexOf(tagName) > -1;
+    });
+    renderImageCollection(filteredImages);
+    }
 }
+    
