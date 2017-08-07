@@ -69,4 +69,8 @@ function filterByTag(tagName) {
     renderImageCollection(filteredImages);
     }
 }
+
+function search(event) {
+    var item=event.target.value
+}
     
