@@ -54,7 +54,7 @@ function renderTagButtons() {
         },
         {
             text: "Desserts",
-            tag: 'jap'
+            tag: 'dessert'
         },
         {
             text: "Show everything",
@@ -68,9 +68,9 @@ function renderTagButtons() {
         
         $(button).click(function () {
             filterByTag(filter.tag);
-        })
-    })
-}
+        });
+    });
+};
 
 $(document).ready(function () {
     //first opening application
@@ -86,11 +86,21 @@ function filterByTag(tagName) {
         return foodimg.tags.indexOf(tagName) > -1;
     });
     renderImageCollection(filteredImages);
-    }
+    };
 }
 
-function search(event) {
-    var item=event.target.value
+function search(title) {
+    title = title.toLowerCase();
+    $("div.gallery-images").empty();
+    if (title == '') {renderImageCollection(this.images)}
+    else {
+        var filteredImages = this.images.filter(function (foodimg) {
+            lowerTitle = foodimg.title.toLowerCase();
+            return lowerTitle.indexOf(title) > -1;
+        });
+    };
+
+    renderImageCollection(filteredImages);
 }
     
 
