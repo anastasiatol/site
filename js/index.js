@@ -103,5 +103,7 @@ function search(title) {
     renderImageCollection(filteredImages);
 }
     
-
+$(document).ready(function() {
+		$(".fancybox").fancybox();
+	});
 
