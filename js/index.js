@@ -8,7 +8,7 @@ function getImagesFromServer() {
 //    })
 //}
 function renderGallery() {
-     getImagesFromServer().then(function (data) {
+    getImagesFromServer().then(function (data) {
         renderImageCollection(data);
         this.images = data;
     }.bind(this))
@@ -24,9 +24,15 @@ function renderImageCollection(images) {
             var img = document.createElement("img");
             img.src = image.src;
             $(img).addClass("small");
-
-            $(".gallery-images").append(img);
+            var a = document.createElement('a');
+            $(a).addClass("fancybox");
+            a.setAttribute("rel", "group");
+            $(a).append(img);
+            a.href=image.src;
+            img.setAttribute("alt",'')
+            $(".gallery-images").append(a);
         });
+        $(".fancybox").fancybox();
     }
 }
 
@@ -35,11 +41,11 @@ function renderTagButtons() {
         {
             text: 'Bellorussian cuisine',
             tag: "bel"
-        }, 
+        },
         {
             text: 'Italian cuisine',
             tag: 'ital'
-        }, 
+        },
         {
             text: "Japanese cuisine",
             tag: 'jap'
@@ -65,7 +71,7 @@ function renderTagButtons() {
         $(button).addClass('tagButton');
         button.innerText = filter.text;
         $('.tagButtons').append(button);
-        
+
         $(button).click(function () {
             filterByTag(filter.tag);
         });
@@ -80,30 +86,30 @@ $(document).ready(function () {
 
 function filterByTag(tagName) {
     $("div.gallery-images").empty();
-    if (tagName == 'all') {renderImageCollection(this.images)}
-    else {
+    if (tagName == 'all') {
+        renderImageCollection(this.images)
+    } else {
         var filteredImages = this.images.filter(function (foodimg) {
-        return foodimg.tags.indexOf(tagName) > -1;
-    });
-    renderImageCollection(filteredImages);
+            return foodimg.tags.indexOf(tagName) > -1;
+        });
+        renderImageCollection(filteredImages);
     };
 }
 
 function search(title) {
     title = title.toLowerCase();
     $("div.gallery-images").empty();
-    if (title == '') {renderImageCollection(this.images)}
-    else {
+    if (title == '') {
+        renderImageCollection(this.images)
+    } else {
         var filteredImages = this.images.filter(function (foodimg) {
             lowerTitle = foodimg.title.toLowerCase();
             return lowerTitle.indexOf(title) > -1;
         });
+        renderImageCollection(filteredImages);
     };
-
-    renderImageCollection(filteredImages);
 }
-    
-$(document).ready(function() {
-		$(".fancybox").fancybox();
-	});
 
+$(document).ready(function () {
+    $(".fancybox").fancybox();
+});
